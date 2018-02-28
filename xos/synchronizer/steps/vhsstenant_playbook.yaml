@@ -22,6 +22,8 @@
   sudo: yes
   gather_facts: no
   vars:
+    - MME_PRIVATE_IP: "10.0.6.1"
+    - HSS_PRIVATE_IP: "10.0.7.1"
   roles: 
     - pre-requirement
     - hss-configure

@@ -2,6 +2,8 @@ REALM: openair4G.eur
 
 MME_HOST: nano.openair4G.eur
 HSS_HOST: hss.openair4G.eur
+MME_ALIAS: nano
+HSS_ALIAS: hss
 HSS_OPERATOR_KEY: '00000000000000000000000000000000'
 
 SIM:
