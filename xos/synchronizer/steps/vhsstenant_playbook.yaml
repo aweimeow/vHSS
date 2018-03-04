@@ -23,7 +23,7 @@
   gather_facts: no
   vars:
     - MME_PRIVATE_IP: "10.0.6.1"
-    - HSS_PRIVATE_IP: "10.0.7.1"
+    - HSS_PRIVATE_IP: "{{ HSS_PRIVATE_IP }}"
   roles: 
     - pre-requirement
     - hss-configure
