@@ -1,0 +1,20 @@
+- name: Check if there is already a systemd definition of OAI-HSS
+  stat:
+    path: /etc/systemd/system/oaihss.service
+  register: service_stat
+
+- name: Stop running systemd service of OAI-HSS if exists
+  systemd:
+    name: "oaihss.service"
+    state: stopped
+  when: service_stat.stat.exists
+
+- name: Setup systemd service definition of OAI-HSS
+  copy:
+    src: "oaihss.service"
+    dest: "/etc/systemd/system/"
+
+- name: Start service
+  systemd:
+    name: "oaihss.service"
+    state: started
