@@ -1,4 +1,4 @@
-option name = "vHSS";
+option name = "vhss";
 option app_label = "vhss";
 
 message VHSSService (Service){
